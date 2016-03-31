@@ -1,0 +1,24 @@
+<h1>Angular Sample</h1>
+<form class="form-inline">
+    <div class="form-group">
+        <label>keyword</label>
+        <input type="text" class="form-control" ng-model="conj.area">
+    </div>
+    <button class="btn btn-default" ng-click="getArticle()">検索</button>
+</form>
+
+<br>
+<div class="resultArea" ng-init="init()">
+    <table class="table table-bordered table-responsive">
+        <tr ng-repeat="item in results">
+            <td>{{$index}}</td>
+            <td>{{item.title}}</td>
+            <td>{{item.owner_nickname}}</td>
+            <td>{{item.accepted}}/{{item.limit}}</td>
+            <td><a href="{{item.event_url}}" target="_blank" class="btn btn-xs btn-default">OPEN</a></td>
+        </tr>
+    </table>
+    <div class="message alert alert-danger" ng-if="results.length==0">
+        記事が存在しません。
+    </div>
+</div>

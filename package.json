@@ -1,0 +1,21 @@
+{
+  "name": "angular-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3",
+    "bootstrap": "^3.3.6",
+    "browser-sync": "^2.11.2"
+  },
+  "scripts": {
+    "start": " browser-sync start --server --files=**/*.html,*.js",
+    "build": "curl http://connpass.com/api/v1/event/?count=100"
+  }
+}
